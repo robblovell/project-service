@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "fact.js",
+  "sourceRoot": "",
+  "sources": [
+    "fact.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAA,QAAA,GAAW,OAAA,CAAQ,UAAR;;EACX,MAAA,GAAS,OAAA,CAAQ,UAAR,CAAmB,CAAC;;EAE7B,UAAA,GAAiB,IAAA,MAAA,CACb,EADa,EAGb;IAAE,MAAA,EAAQ,KAAV;GAHa;;EAKjB,MAAM,CAAC,OAAP,GAAiB;IAAE,KAAA,EAAO,QAAQ,CAAC,KAAT,CAAe,MAAf,EAAuB,UAAvB,CAAT;IAA6C,MAAA,EAAQ,UAArD;;AARjB"
+}
