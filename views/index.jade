@@ -2,40 +2,5 @@ extends layout
 
 block content
   h1= title
-  p Add rules by posting to the "Rules Resource".  A context is used to group rule sets together.
-  p Post a fact to the "Facts Resource" with a context specified and the rules associated with that context will check the fact and fire and give a result.
-  pre An example context with a set of rules.
-    |{
-    |  "context": [{
-    |    "name": "Rule 1",
-    |    "seller": "xyz",
-    |  }],
-    |  "rules": [
-    |    {
-    |      "condition": "R.when(this.transactionTotal < 500);",
-    |      "consequence": "this.result = false; R.stop();",
-    |      "priority": "10"
-    |    },
-    |    {
-    |      "condition": "R.when(this.product.SKU == 500 && this.product.price > 20);",
-    |      "consequence": "this.product['discount']=20; this.result = this.product; R.stop();",
-    |      "priority": "10"
-    |    }
-    |  ]
-    |}
-  pre An example fact to use with the given context
-    | {
-    |  "context": [{
-    |    "name": "Rule 1",
-    |    "seller": "xyz"
-    |  }],
-    |  "fact": {
-    |    "product": {
-    |      "SKU": 500,
-    |      "price": 25
-    |    },
-    |    "transactionTotal": 500
-    |  }
-    |}
-  p The reply is: {"SKU":500,"price":25,"discount":20}
+  p Prject Service prototype for the Design Center.
   p Swagger documentation is at: /docs/index.html

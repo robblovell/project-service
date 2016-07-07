@@ -8,7 +8,7 @@
 
   router.get('/', function(req, res, next) {
     return res.render('index', {
-      title: 'Build Direct Rules Engine'
+      title: 'Build Direct Project Service'
     });
   });
 

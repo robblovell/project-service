@@ -13,11 +13,8 @@
 
     Nested.find = function(parentFiled, Child, childField, method, resources, callback) {
       var finds, i, len, query, resource;
-      console.log("after");
       if (method === "GET") {
-        console.log("GET/INDEX");
         if ((resources != null) && resources instanceof Array) {
-          console.log("Index Request after");
           finds = [];
           for (i = 0, len = resources.length; i < len; i++) {
             resource = resources[i];
@@ -44,7 +41,6 @@
             return callback(error, resources);
           });
         } else {
-          console.log("Get Request after");
           if ((resources != null)) {
             resource = resources;
             query = {};

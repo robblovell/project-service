@@ -30,9 +30,9 @@
     specification = {
       swagger: '2.0',
       info: {
-        description: 'Rules Service',
+        description: 'Project Service',
         version: config.version,
-        title: 'Rules Service',
+        title: 'Project Service Stub',
         contact: {
           name: 'Robb Lovell'
         }

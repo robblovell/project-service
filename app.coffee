@@ -31,13 +31,25 @@ config = require('./config/configuration')
 mongoose = require('mongoose')
 mongoose.Promise = require('bluebird')
 mongoose.connect(config.db) # connect to our database
-Scope= require('./models/rule')
-Rules = require('./controllers/rules')(app, Scope.model)
-fact= require('./models/fact')
-Fact = require('./controllers/facts')(app, fact.model)
+Room= require('./models/room')
+Rooms = require('./controllers/rooms')(app, Room.model)
+Project= require('./models/project')
+Projects = require('./controllers/projects')(app, Project.model)
+Layout= require('./models/layout')
+Layouts = require('./controllers/layouts')(app, Layout.model)
+Placeable= require('./models/placeable')
+Placeables = require('./controllers/placeables')(app, Layout.model)
+ProjectsRooms = require('./controllers/projects_rooms')(app, Room.model)
+RoomsLayouts = require('./controllers/rooms_layouts')(app, Layout.model)
+RoomsPlaceables = require('./controllers/rooms_placeables')(app, Placeable.model)
 Resources = {
-  Rules:Rules
-  Fact:Fact
+  Projects:Projects
+  Rooms:Rooms
+  Layouts:Layouts
+  Placeables:Placeables
+  ProjectsRooms:ProjectsRooms
+  RoomsLayouts:RoomsLayouts
+  RoomsPlaceables:RoomsPlaceables
 }
 
 swagger = require('./controllers/swagger')(app, Resources, '/api', config)
@@ -49,8 +61,6 @@ haltOnTimedout = (req, res, next) ->
   if (!req.timedout)
     next()
 app.use(haltOnTimedout)
-
-
 
 # catch 404 and forward to error handler
 #app.use((req, res, next) ->

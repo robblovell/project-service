@@ -9,7 +9,7 @@ config =
     segementKey: ""
     version: "0.0.1"
     timeout: 15000
-devDB="mongodb://bd-rulesservice-dev:iJyHMx2TJBxv2GLFXE1WNinuiC3P5IAZRPIMU55Ctd3xeLjBCSSKJtWoi5hDEk5pTM16TcZbDDUiNbnTV1rAFg==@bd-rulesservice-dev.documents.azure.com:10250/?ssl=true"
+    
 switch config.env
 # todo:: develop and staging databases
     when 'develop'
