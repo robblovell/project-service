@@ -66,7 +66,7 @@
 
   Placeable = require('./models/placeable');
 
-  Placeables = require('./controllers/placeables')(app, Layout.model);
+  Placeables = require('./controllers/placeables')(app, Placeable.model);
 
   ProjectsRooms = require('./controllers/projects_rooms')(app, Room.model);
 

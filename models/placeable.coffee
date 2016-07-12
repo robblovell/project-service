@@ -3,7 +3,7 @@ Schema = require('mongoose').Schema
 
 ObjectId = Mongoose.Schema.Types.ObjectId
 
-LayoutSchema = new Schema({
+PlaceableSchema = new Schema({
 
     room: {
         type: ObjectId
@@ -12,5 +12,5 @@ LayoutSchema = new Schema({
         require: true
     }
 })
-LayoutModel = Mongoose.model("Placeable", LayoutSchema)
-module.exports = { model: LayoutModel, schema: LayoutSchema }
+PlaceableModel = Mongoose.model("Placeable", PlaceableSchema)
+module.exports = { model: PlaceableModel, schema: PlaceableSchema }
