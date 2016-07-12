@@ -35,7 +35,7 @@
       config.schemes = ['https'];
       break;
     default:
-      config.db = "mongodb://localhost:27017/rules";
+      config.db = "mongodb://localhost:27017/projects";
       config.basepath = "/";
       config.host = "localhost:3000";
       config.schemes = ['http'];
