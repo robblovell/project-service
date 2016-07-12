@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "placeables.js",
+  "sourceRoot": "",
+  "sources": [
+    "placeables.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAA,QAAA,GAAW,OAAA,CAAQ,UAAR;;EACX,QAAA,GAAW,OAAA,CAAQ,YAAR;;EAEX,MAAM,CAAC,OAAP,GAAiB,SAAC,GAAD,EAAM,KAAN;AACb,QAAA;IAAA,QAAA,GAAW,QAAA,CAAS,GAAT,EAAc,EAAd,EAAkB,YAAlB,EAAgC,KAAhC,CAAsC,CAAC,IAAvC,CAAA;AACX,WAAO;EAFM;AAHjB"
+}
