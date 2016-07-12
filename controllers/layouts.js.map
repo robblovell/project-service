@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "layouts.js",
+  "sourceRoot": "",
+  "sources": [
+    "layouts.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAA,QAAA,GAAW,OAAA,CAAQ,UAAR;;EACX,QAAA,GAAW,OAAA,CAAQ,YAAR;;EAEX,MAAM,CAAC,OAAP,GAAiB,SAAC,GAAD,EAAM,KAAN;AACb,QAAA;IAAA,QAAA,GAAW,QAAA,CAAS,GAAT,EAAc,EAAd,EAAkB,SAAlB,EAA6B,KAA7B,CAAmC,CAAC,IAApC,CAAA;AACX,WAAO;EAFM;AAHjB"
+}
