@@ -84,7 +84,7 @@
     RoomsPlaceables: RoomsPlaceables
   };
 
-  swagger = require('./controllers/swagger')(app, Resources, '/api', config);
+  swagger = require('./controllers/swagger')(app, Resources, '/spec', config);
 
   timeout = require('connect-timeout');
 
