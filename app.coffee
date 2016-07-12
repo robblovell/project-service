@@ -52,7 +52,7 @@ Resources = {
   RoomsPlaceables:RoomsPlaceables
 }
 
-swagger = require('./controllers/swagger')(app, Resources, '/spec', config)
+swagger = require('./controllers/swagger')(app, Resources, '/api', config)
 
 timeout = require('connect-timeout')
 
