@@ -1,0 +1,73 @@
+  securedBy: [Unauthenticated]
+
+  displayName: Rooms Resource
+
+  description: |
+    This is a top level description of the room resource
+  get:
+    description: get all my rooms
+    headers:
+
+    queryParameters:
+      query:
+        displayName: Query
+        type: string
+        description: query on an indexed field of the room
+        example: name="My Kitchen"
+        required: false
+
+  post:
+    description: |
+      Create a new room.
+
+      Yeah!
+    body:
+      application/json:
+        example: |
+          {
+            name: "example room"
+          }
+    responses:
+      200:
+        description: A room was created.
+  /{id}:
+    uriParameters:
+      id:
+        type: string
+        description: room identifier
+        minLength: 1
+        maxLength: 10
+
+    get:
+      description: Retrieve a specific room
+      responses:
+        200:
+          body:
+            application/json:
+             example: |
+                {
+                  "data": {
+                    "id": "...",
+                    "name": "My Bathroom",
+                  },
+                  "success": true,
+                  "status": 200
+                }
+    put:
+      description: Update the account
+      body:
+        application/x-www-form-urlencoded:
+          formParameters:
+            name:
+              description: name of the room
+              type: string
+              example: Bathroom
+
+    delete:
+      description: Delete the room
+
+    /placeables:
+      !include placeables.raml
+
+    /layouts:
+      !include layouts.raml

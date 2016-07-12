@@ -1,0 +1,39 @@
+#%RAML 0.8
+title: Design Center
+baseUri: http://localhost:3000/{version}
+version: v1
+mediaType:  application/json
+documentation:
+  - title: Welcome
+    content: |
+      Welcome to the Design Center API
+
+securitySchemes:
+  - Unauthenticated: !include unauthenticated.raml
+
+traits:
+  - paged:
+      queryParameters:
+        page_size:
+          description: The number of items per page
+          type: number
+          default: 20
+        page:
+          description: The page to return
+          type: number
+          default: 0
+      headers:
+        content-type:
+          type: string
+          description: application/json, model/x3d-vrml, model/iges
+
+/projects:
+  !include projects.raml
+
+/rooms:
+  !include rooms.raml
+
+/placeables:
+  !include placeables.raml
+
+

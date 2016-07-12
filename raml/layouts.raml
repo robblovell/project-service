@@ -1,0 +1,65 @@
+  securedBy: [Unauthenticated]
+
+  displayName: Layouts Resource
+
+  description: |
+    This is a top level description of the layouts resource
+  get:
+    description: get layouts for a set of placeables
+    queryParameters:
+      placeables:
+        displayName: Placeables list
+        type: string
+        description: query for a set of placeables
+        example: placeables=???
+        required: false
+
+  post:
+    description: |
+      Create a new layouts.
+
+      Yeah!
+    body:
+      application/json:
+        example: |
+          {
+            name: "example layouts"
+          }
+    responses:
+      200:
+        description: A layouts was created.
+  /{id}:
+    uriParameters:
+      id:
+        type: string
+        description: layouts identifier
+        minLength: 1
+        maxLength: 10
+
+    get:
+      description: Retrieve a specific layout
+      responses:
+        200:
+          body:
+            application/json:
+             example: |
+                {
+                  "data": {
+                    "id": "...",
+                    "name": "Layout 1",
+                  },
+                  "success": true,
+                  "status": 200
+                }
+    put:
+      description: Update the account
+      body:
+        application/x-www-form-urlencoded:
+          formParameters:
+            name:
+              description: name of the layouts
+              type: string
+              example: Bathlayouts
+
+    delete:
+      description: Delete the layouts

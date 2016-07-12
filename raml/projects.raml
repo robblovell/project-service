@@ -1,0 +1,68 @@
+
+  displayName: Projects Resource
+
+  description: |
+    This is a top level description of the project resource
+  get:
+    description: get all my projects
+    queryParameters:
+      query:
+        displayName: Query
+        type: string
+        description: query on an indexed field of the project
+        example: name="My Kitchen"
+        required: false
+  post:
+    description: |
+      Create a new project.
+
+      Yeah!
+    body:
+      application/json:
+        example: |
+          {
+            name: "example project"
+          }
+    responses:
+      200:
+        description: A project was created.
+  /{id}:
+    uriParameters:
+      id:
+        type: string
+        description: project identifier
+        minLength: 1
+        maxLength: 10
+
+    get:
+      description: Retrieve a specific project
+      responses:
+        200:
+          body:
+            application/json:
+             example: |
+                {
+                  "data": {
+                    "id": "...",
+                    "name": "My House",
+                  },
+                  "success": true,
+                  "status": 200
+                }
+    put:
+      description: Update the account
+      body:
+        application/x-www-form-urlencoded:
+          formParameters:
+            name:
+              description: name of the project
+              type: string
+              example: Naruto Uzumaki's House
+            active:
+              type: boolean
+
+    delete:
+      description: Delete the project
+
+    /rooms:
+      !include rooms.raml

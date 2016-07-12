@@ -1,0 +1,66 @@
+  securedBy: [Unauthenticated]
+
+  displayName: Placeables Resource
+
+  description: |
+    This is a top level description of the placeable resource
+  get:
+    description: get all my placeables
+    queryParameters:
+      query:
+        displayName: Query
+        type: string
+        description: query on an indexed field of the placeable
+        example: name="My Kitchen"
+        required: false
+  post:
+    description: |
+      Create a new placeable.
+
+      Yeah!
+    body:
+      application/json:
+        example: |
+          {
+            name: "example placeable"
+          }
+    responses:
+      200:
+        description: A placeable was created.
+  /{id}:
+    uriParameters:
+      id:
+        type: string
+        description: placeable identifier
+        minLength: 1
+        maxLength: 10
+
+    get:
+      description: Retrieve a specific placeable
+      responses:
+        200:
+          body:
+            application/json:
+             example: |
+                {
+                  "data": {
+                    "id": "...",
+                    "name": "Chair",
+                  },
+                  "success": true,
+                  "status": 200
+                }
+    put:
+      description: Update the account
+      body:
+        application/x-www-form-urlencoded:
+          formParameters:
+            name:
+              description: The name of the product
+              type: string
+              example: Chair
+
+    delete:
+      description: Delete the placeable
+
+
