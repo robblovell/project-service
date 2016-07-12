@@ -68,7 +68,7 @@
 
   Projects = require('./controllers/projects')(app, Project.model);
 
-  ProjectsRooms = require('./controllers/projects_rooms')(app, Room.model);
+  ProjectsRooms = require('./controllers/projects_rooms')(app, Room.model, Placeable, Layout);
 
   RoomsLayouts = require('./controllers/rooms_layouts')(app, Layout.model);
 

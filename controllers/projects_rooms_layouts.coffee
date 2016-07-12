@@ -1,10 +1,9 @@
 mongoose = require('mongoose')
 Resource = require('resourcejs')
-Layout = require('../models/Layout').model
-Placeable = require('../models/Placeable').model
+
 Nested = require './helpers/Nested'
 
-module.exports = (app, model) ->
+module.exports = (app, model, Layout) ->
     resource = Resource(app, '/projects/:projectId/rooms/:roomId', 'Layouts', model).rest({
         before: (req, res, next) ->
             req.body.project = req.params.projectId

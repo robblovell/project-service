@@ -40,17 +40,20 @@ Layouts = require('./controllers/layouts')(app, Layout.model)
 Project= require('./models/project')
 Projects = require('./controllers/projects')(app, Project.model)
 
-ProjectsRooms = require('./controllers/projects_rooms')(app, Room.model)
+ProjectsRooms = require('./controllers/projects_rooms')(app, Room.model, Placeable, Layout)
 RoomsLayouts = require('./controllers/rooms_layouts')(app, Layout.model)
 RoomsPlaceables = require('./controllers/rooms_placeables')(app, Placeable.model)
+#ProjectsRoomsLayouts = require('./controllers/projects_rooms_layouts')(app, Placeable.model, Layout)
+
 Resources = {
-  Projects:Projects
-  Rooms:Rooms
-  Layouts:Layouts
-  Placeables:Placeables
-  ProjectsRooms:ProjectsRooms
-  RoomsLayouts:RoomsLayouts
-  RoomsPlaceables:RoomsPlaceables
+  Projects: Projects
+  Rooms: Rooms
+  Layouts: Layouts
+  Placeables: Placeables
+  ProjectsRooms: ProjectsRooms
+  RoomsLayouts: RoomsLayouts
+  RoomsPlaceables: RoomsPlaceables
+#  ProjectsRoomsLayouts: ProjectsRoomsLayouts
 }
 
 swagger = require('./controllers/swagger')(app, Resources, '/api', config)
