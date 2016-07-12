@@ -52,21 +52,21 @@
 
   mongoose.connect(config.db);
 
+  Placeable = require('./models/placeable');
+
+  Placeables = require('./controllers/placeables')(app, Placeable.model);
+
   Room = require('./models/room');
 
   Rooms = require('./controllers/rooms')(app, Room.model);
-
-  Project = require('./models/project');
-
-  Projects = require('./controllers/projects')(app, Project.model);
 
   Layout = require('./models/layout');
 
   Layouts = require('./controllers/layouts')(app, Layout.model);
 
-  Placeable = require('./models/placeable');
+  Project = require('./models/project');
 
-  Placeables = require('./controllers/placeables')(app, Placeable.model);
+  Projects = require('./controllers/projects')(app, Project.model);
 
   ProjectsRooms = require('./controllers/projects_rooms')(app, Room.model);
 
